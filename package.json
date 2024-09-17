@@ -16,13 +16,20 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"prepare": "husky"
+		"prepare": "husky && husky install"
 	},
 	"eslintConfig": {
-		"extends": ["react-app", "react-app/jest"]
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
 	},
 	"browserslist": {
-		"production": [">0.2%", "not dead", "not op_mini all"],
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
 		"development": [
 			"last 1 chrome version",
 			"last 1 firefox version",
@@ -31,10 +38,11 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.1",
-		"husky": "^9.1.6",
+		"@commitlint/cli": "^19.5.0",
+		"@commitlint/config-conventional": "^19.5.0",
+		"husky": "^8.0.0",
 		"lint-staged": "^15.2.10"
 	},
-
 	"lint-staged": {
 		"*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
 			"biome check --files-ignore-unknown=true",
@@ -44,7 +52,8 @@
 			"biome format --write --no-errors-on-unmatched",
 			"biome lint --write --no-errors-on-unmatched"
 		],
-
-		"*": ["biome check --no-errors-on-unmatched --files-ignore-unknown=true"]
+		"*": [
+			"biome check --no-errors-on-unmatched --files-ignore-unknown=true"
+		]
 	}
 }
