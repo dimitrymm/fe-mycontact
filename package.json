@@ -40,6 +40,7 @@
 		"@biomejs/biome": "1.9.1",
 		"@commitlint/cli": "^19.5.0",
 		"@commitlint/config-conventional": "^19.5.0",
+		"git-commit-msg-linter": "^5.0.8",
 		"husky": "^8.0.0",
 		"lint-staged": "^15.2.10"
 	},
